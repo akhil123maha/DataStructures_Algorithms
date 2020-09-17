@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class SubsetWithRecursion_Sas1905 {
+public class SubsetWithRecursion_Akhil123maha {
 
     static int recursion_count = 0;
     public static void main(String[] args) {
