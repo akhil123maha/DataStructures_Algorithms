@@ -23,11 +23,8 @@ public class SubsetWithRecursion_Akhil123maha {
     private void subsetsHelper(List<List<Integer>> list , List<Integer> resultList, int [] nums, int start){
         list.add(new ArrayList<>(resultList));
         for(int i = start; i < nums.length; i++){
-            // add element
             resultList.add(nums[i]);
-            // Explore
             subsetsHelper(list, resultList, nums, i + 1);
-            // remove
             resultList.remove(resultList.size() - 1);
         }
     }
