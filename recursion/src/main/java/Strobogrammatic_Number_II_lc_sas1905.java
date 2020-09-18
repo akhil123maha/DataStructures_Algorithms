@@ -20,6 +20,7 @@ public class Strobogrammatic_Number_II_lc_sas1905 {
         int n = sc.nextInt();
         String s =  "";
         // Creating a Dummy String of size N.
+        
         for(int i=0;i<n;i++){
             s= s+ "p";
         }
