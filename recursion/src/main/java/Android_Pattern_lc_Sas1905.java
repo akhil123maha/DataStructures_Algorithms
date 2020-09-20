@@ -19,10 +19,9 @@ public class Android_Pattern_lc_Sas1905 {
         N=n;
         M=m;
         visited = new int[3][3];
+        reset();
         for(int i=0;i<3;i++) {
             for (int j = 0; j < 3; j++) {
-                reset();
-                visited[i][j] = 1;
                 List<Grid_Block> blocks = new ArrayList<>();
                 blocks.add(new Grid_Block(i, j));
                 solve_with_backtracking(i, j, 1, blocks);
