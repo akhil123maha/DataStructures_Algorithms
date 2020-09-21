@@ -26,9 +26,7 @@ public class Permutation_lc_sas1905 {
          List<Integer> given = new ArrayList<>();
          given.add(1);
          given.add(2);
-         given.add(3);
-         given.add(4);
-         given.add(5);
+         given.add(2);
          solve_ques(given);
     }
 
@@ -45,10 +43,22 @@ public class Permutation_lc_sas1905 {
             return;
         }
         for(int i=lo;i<=hi;i++){
-            Collections.swap(given_list,lo,i);
-            permute_with_recursion(given_list,lo+1,hi);
-            Collections.swap(given_list,lo,i);
+            boolean Swappable = isSwappable(given_list,lo,i); // For Handling Duplicate Permutations,Remove this if all the elements are distinct
+            if(Swappable) {
+                Collections.swap(given_list, lo, i);
+                permute_with_recursion(given_list, lo + 1, hi);
+                Collections.swap(given_list, lo, i);
+            }
         }
         return;
+    }
+
+    private static boolean isSwappable(List<Integer> given_list, int lo, int hi) {
+        for(int i=lo;i<hi;i++){
+            if (given_list.get(i) == given_list.get(hi)){
+                return false;
+            }
+        }
+        return true;
     }
 }
