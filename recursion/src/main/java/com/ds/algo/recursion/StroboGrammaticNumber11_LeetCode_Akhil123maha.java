@@ -10,7 +10,7 @@ public class StroboGrammaticNumber11_LeetCode_Akhil123maha {
     public static void main(String[] args) {
 
         StroboGrammaticNumber11_LeetCode_Akhil123maha solution = new StroboGrammaticNumber11_LeetCode_Akhil123maha();
-        int length = 2;
+        int length = 3;
         System.out.println(solution.findStroboGrammaticNumbers(length));
     }
 
