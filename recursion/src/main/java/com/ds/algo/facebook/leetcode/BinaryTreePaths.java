@@ -33,7 +33,8 @@ public class BinaryTreePaths {
     }
 
     public List<String> binaryTreePathsHelper(TreeNode root, List<String> output, String path){
-        if(root.left == null && root.right == null){
+        if(root.left == null && root.right == null)
+        {
             output.add(path);
             return output;
         }
